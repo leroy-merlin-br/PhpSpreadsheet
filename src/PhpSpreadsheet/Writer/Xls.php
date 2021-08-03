@@ -122,7 +122,7 @@ class Xls extends BaseWriter
     public function save($pFilename): void
     {
         // garbage collect
-        $this->spreadsheet->garbageCollect();
+        //$this->spreadsheet->garbageCollect();
 
         $saveDebugLog = Calculation::getInstance($this->spreadsheet)->getDebugLog()->getWriteDebugLog();
         Calculation::getInstance($this->spreadsheet)->getDebugLog()->setWriteDebugLog(false);
