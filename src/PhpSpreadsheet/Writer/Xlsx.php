@@ -290,7 +290,7 @@ class Xlsx extends BaseWriter
     {
         // garbage collect
         $this->pathNames = [];
-        $this->spreadSheet->garbageCollect();
+        //$this->spreadSheet->garbageCollect();
 
         $saveDebugLog = Calculation::getInstance($this->spreadSheet)->getDebugLog()->getWriteDebugLog();
         Calculation::getInstance($this->spreadSheet)->getDebugLog()->setWriteDebugLog(false);
