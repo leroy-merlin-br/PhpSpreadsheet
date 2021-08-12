@@ -322,7 +322,7 @@ class Cells
         }
 
         // Store new values
-        $stored = $newCollection->cache->setMultiple($newValues, 6000);
+        $stored = $newCollection->cache->setMultiple($newValues, 99999);
         if (!$stored) {
             $newCollection->__destruct();
 
@@ -377,7 +377,7 @@ class Cells
         if ($this->currentCellIsDirty && !empty($this->currentCoordinate)) {
             $this->currentCell->detach();
 
-            $stored = $this->cache->set($this->cachePrefix . $this->currentCoordinate, $this->currentCell, 6000);
+            $stored = $this->cache->set($this->cachePrefix . $this->currentCoordinate, $this->currentCell, 99999);
             if (!$stored) {
                 $this->__destruct();
 
